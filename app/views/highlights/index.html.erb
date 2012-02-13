@@ -1,0 +1,25 @@
+<body>
+<iframe height="390" src="http://localhost:3000/iframe/" width="660" name='video' scrolling="no" style="padding-right: 92px; background: #000; padding-top: 50px;"></iframe>
+<DIV id="wrapper">
+<h4>Highlights from Yesterdays Games</h4>
+
+
+<% require 'nokogiri' %>
+<% require 'open-uri' %>
+
+<% doc = Nokogiri::HTML(open('http://www.nba.com/gameline/20120209/')) %>
+<UL id="games">
+<% doc.css('.GameLine').each do |link| %>
+	<LI><a href="http://www.nba.com/
+		<% x = link.css(".nbaVideoWrapper a").first %>
+		<%= x['href'] %>" target="iframedvideo">
+		<% y= link.css('div.nbaModTopTeamName').first %>
+		<%= y.content %> <SPAN>vs.</SPAN>
+		<% z= link.css('div.nbaModTopTeamName').last %>
+		<%= z.content %>
+	</a></LI>
+<% end %>
+</UL>
+<BR class="clear">
+</DIV>
+</BODY>

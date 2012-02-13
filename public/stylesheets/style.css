@@ -1,0 +1,28 @@
+body { text-align: center; font-family: 'Helvetica'; background: #CCC; color: #999; margin-top: 30px; }
+	body#iframe { margin: 0; }	.clear{ clear: both;}
+#wrapper { text-align: left; margin: 0 auto; width: 960px; padding: 20px; background: #333; border-radius: 20px; }
+h4 { text-align: center; }
+a { color: #0099CC; text-decoration: none; }
+
+#overlay {
+    background: none repeat scroll 0 0 #000000;
+    height: 800px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 92px;
+}
+	#overlay2 {
+	    background: none repeat scroll 0 0 #000000;
+	    height: 139px;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 700px;
+	}
+iframe { border:none; }
+
+ul#games {margin: 0; padding: 0; list-style:none; }
+ul#games li { float: left; width: 200px; height: 40px; margin: 0 10px; }
+ul#games li a { width: 200px; display: block; text-align: center; padding: 10px 0; background: #000; border-radius: 4px; text-transform: uppercase; font-size: 20px; font-weight: bold; }
+ul#games li a span { font-size: 11px; font-weight: normal; }
