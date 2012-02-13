@@ -1,11 +1,23 @@
-body { text-align: center; font-family: 'Helvetica'; background: #CCC; color: #999; margin-top: 30px; }
-	body#iframe { margin: 0; }	.clear{ clear: both;}
-#wrapper { text-align: left; margin: 0 auto; width: 960px; padding: 20px; background: #333; border-radius: 20px; }
+body { text-align: center; font-family: 'Helvetica'; background: url('../images/bg.gif'); color: #999; margin-top: 30px; }
+	body#iframe { margin: 0; background: #141414 url('../images/choose.gif') 65% 90% no-repeat; }	.clear{ clear: both;}
+#wrapper { text-align: left; margin: 0 auto; width: 600px; padding: 20px;border-radius: 20px; }
+
+.shadow {
+  -moz-box-shadow:    0px 0px 4px 1px #222;
+  -webkit-box-shadow: 0px 0px 4px 1px #222;
+  box-shadow:         0px 0px 4px 1px #222;
+}
+
+h1#logo { font-size: 26px; font-variant: small-caps; color: #60594d; margin-bottom: 0px; padding:0; font-family: "adobe-garamond-pro",sans-serif; text-shadow: 0px 0px 3px #000; }
+h4#tagline { margin-top: 0px; font-size: 15px; font-variant: small-caps; font-weight: normal; padding:0; color: #60594d;font-family: "adobe-garamond-pro",sans-serif; text-shadow: 0px 0px 3px #000; }
+
 h4 { text-align: center; }
 a { color: #0099CC; text-decoration: none; }
 
+iframe#frame { border-radius: 12px; padding-right: 92px; background: #141414; padding-top: 50px; border: 7px solid #393939;  }
+
 #overlay {
-    background: none repeat scroll 0 0 #000000;
+    background: none repeat scroll 0 0 #141414;
     height: 800px;
     left: 0;
     position: absolute;
@@ -13,7 +25,7 @@ a { color: #0099CC; text-decoration: none; }
     width: 92px;
 }
 	#overlay2 {
-	    background: none repeat scroll 0 0 #000000;
+	    background: none repeat scroll 0 0 #141414;
 	    height: 139px;
 	    left: 0;
 	    position: absolute;
@@ -23,6 +35,9 @@ a { color: #0099CC; text-decoration: none; }
 iframe { border:none; }
 
 ul#games {margin: 0; padding: 0; list-style:none; }
-ul#games li { float: left; width: 200px; height: 40px; margin: 0 10px; }
-ul#games li a { width: 200px; display: block; text-align: center; padding: 10px 0; background: #000; border-radius: 4px; text-transform: uppercase; font-size: 20px; font-weight: bold; }
-ul#games li a span { font-size: 11px; font-weight: normal; }
+ul#games li { float: left; margin: 0 10px; }
+ul#games li a { text-shadow: 0px 0px 3px #000; color: #a09177; margin-bottom: 10px;; font-family: 'Myriad-Pro'; display: block; text-align: center; padding: 10px 0; width: 130px; background: #3a3a3a url('../images/gradient.gif') repeat-x; border-radius: 4px; text-transform: uppercase; font-size: 20px; font-weight: 700; }
+ul#games li a span { font-size: 11px; margin: 0 5px; color: #6c665a; }
+
+p.footer { font-size: 11px; text-shadow: 0px 0px 3px #000; color: #5c564b; text-align: center; margin-top: 50px; line-height: 16px; }
+p.footer a { color: #5c564b; }

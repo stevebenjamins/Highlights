@@ -1,25 +1,31 @@
 <body>
-<iframe height="390" src="http://localhost:3000/iframe/" width="660" name='video' scrolling="no" style="padding-right: 92px; background: #000; padding-top: 50px;"></iframe>
+
+<h1 id="logo">YesterdaysGames.net</h1>
+<h4 id="tagline">NBA Highlights for February 19 2012</h4>
+
+<iframe class="shadow" height="390" src="/iframe/" width="620" name='video' scrolling="no" id="frame"></iframe>
+
 <DIV id="wrapper">
-<h4>Highlights from Yesterdays Games</h4>
 
-
-<% require 'nokogiri' %>
-<% require 'open-uri' %>
-
-<% doc = Nokogiri::HTML(open('http://www.nba.com/gameline/20120209/')) %>
 <UL id="games">
-<% doc.css('.GameLine').each do |link| %>
-	<LI><a href="http://www.nba.com/
-		<% x = link.css(".nbaVideoWrapper a").first %>
-		<%= x['href'] %>" target="iframedvideo">
-		<% y= link.css('div.nbaModTopTeamName').first %>
-		<%= y.content %> <SPAN>vs.</SPAN>
-		<% z= link.css('div.nbaModTopTeamName').last %>
-		<%= z.content %>
+<% @doc.css('.GameLine').each do |link| %>
+
+	<!-- Crawl the 3 variables we need -->
+	<% videourl = link.css(".nbaVideoWrapper a").first %>
+	<% team1 = link.css('div.nbaModTopTeamName').first %>
+	<% team2 = link.css('div.nbaModTopTeamName').last %>
+
+	<!--- Output the HTML -->
+	<LI><a class="shadow" href="http://www.nba.com/<%= videourl['href'] %>" target="iframedvideo">
+		<%= team1.content %> <SPAN>vs. </SPAN><%= team2.content %>
 	</a></LI>
+
 <% end %>
 </UL>
+
 <BR class="clear">
+
+<P class="footer">This site was created by <a href="http://www.stevebenjamins.com/">Steve Benjamins</a> after he was frustrated with how<BR> tedious watching highlights on NBA.com is. #FirstWorldProblems</p>
+
 </DIV>
 </BODY>
